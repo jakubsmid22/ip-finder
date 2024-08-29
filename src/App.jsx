@@ -2,8 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import mapboxgl from "mapbox-gl";
 
 const App = () => {
-  const MAPBOX_KEY =""; // ENTER MAPBOX KEY
-  mapboxgl.accessToken = MAPBOX_KEY;
+ mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
 
   const [error, setError] = useState(undefined);
   const [countryImg, setCountryImg] = useState("");
